@@ -11,22 +11,27 @@
   -moz-text-size-adjust: 100%;
   background-color: #000;
   font-family: "Inter", "Arial", sans-serif;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
 
 .page {
   max-width: 880px;
-  padding: 45px 0 60px;
+  padding: 45px 19px 60px;
 }
 
 .body__page {
   margin: 0 auto;
 }
 
-.header {
+.header {                                                       /*на 320 растянуть на всю длину*/
   width: 100%;
   min-height: 74px;
   border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+}
+
+.header__logo {
+  width: 142px;
+  height: 33px;
 }
 
 .content {
@@ -59,7 +64,7 @@
 }
 
 .profile__name {
-  /* добавить width ??? */
+    margin: 0;  
     font-weight: 500;
     font-size: 42px;
     line-height: 48px;
@@ -74,15 +79,164 @@
   background-position: center;
   cursor: pointer;
   box-sizing: border-box;
-  transition: opacity 0.3s linear;
+  transition: opacity 0.3s;
 }
 
-.profile__button_type_edit { /*do :hover ???*/
-  border: 1px solid #fff;
-  padding: 0;
+.profile__button:hover  {
+  opacity: 0.6;
+}
+
+.profile__button_type_edit { 
+  background-image: url(../images/edit.svg);
   width: 24px;
   height: 24px;
+  border: 1px solid #fff;
+  margin: 7px 0 0 18px;
+  align-self: end;
+  padding: 0;
   align-self: center;
-  background-image: url(../images/edit.svg);
+  box-sizing: border-box;
 }
 
+.profile__profession {
+  margin: 0;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.profile__button_type_add {
+  background-image: url(../images/add.svg);
+  width: 150px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  box-sizing: border-box;
+  margin-left: auto;
+}
+
+/* Секция с карточками */
+
+.elements {
+  display: grid;
+  padding-top: 50px;
+  max-width: 880px;
+  gap: 20px 17px;
+  grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));    
+}
+
+.element {
+  background-color: #fff ;
+  border-radius: 10px;
+}
+
+.element__image {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.element__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 15px 31px 21px;
+}
+
+.element__title {
+  margin: 0;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+}
+
+.element__like {
+  background-image: url(../images/heart.svg);
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: 0;
+  width: 22px;
+  height: 19px;
+  transition: opacity 0.3s;
+}
+
+.element__like:hover {
+  opacity: 0.6;
+}
+
+.footer {
+  max-width: 880px;
+}
+
+.footer__copyright {
+  margin: 0;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #545454;
+}
+
+@media screen and (max-width: 768px) {
+  .page {
+    padding: 28px 0 36px;
+  }
+  .header__logo {
+    padding-left: 27px;
+    width: 104px;
+    height: 24px;
+  }
+  .profile {
+    margin: 0 auto;
+    width: 88%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .profile__avatar {
+    margin-right: 0;
+    margin-bottom: 26px;
+  }
+
+  .profile__info {
+    max-width: calc(100% - 38px);
+    margin-bottom: 36px;
+  }
+
+  .profile__container {
+    justify-content: center;
+    margin-bottom: 14px;
+  }
+
+  .profile__name {
+    font-size: 27px;
+    line-height: 33px;
+    text-align: center;
+  }
+
+  .profile__button_type_edit { 
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+  }
+
+  .profile__profession {
+    text-align: center;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+  }
+
+  .profile__button_type_add {
+    width: 282px;
+    height: 50px;
+    margin-left: 0;
+  }
+}
