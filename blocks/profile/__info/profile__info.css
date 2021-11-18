@@ -1,0 +1,11 @@
+.profile__info {
+  max-width: calc(100% - 300px);
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .profile__info {
+    max-width: calc(100% - 38px);
+    margin-bottom: 36px;
+  }
+}
