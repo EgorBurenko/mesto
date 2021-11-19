@@ -9,7 +9,7 @@
 @media screen and (max-width: 768px) {
   .elements {
     padding-top: 36px;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     padding-left: 19px;
     padding-right: 19px;
   }
