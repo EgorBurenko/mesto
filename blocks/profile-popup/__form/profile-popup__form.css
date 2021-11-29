@@ -1,4 +1,4 @@
-.popup__form {
+.profile-popup__form {
   padding: 34px 36px 37px;
   display: flex;
   flex-direction: column;
@@ -6,7 +6,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .popup__form {
+  .profile-popup__form {
     padding: 25px 22px;
   }
 }

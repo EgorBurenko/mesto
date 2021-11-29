@@ -1,4 +1,4 @@
-.popup__submit-button {
+.profile-popup__submit-button {
   width: 100%;
   height: 50px;
   font-weight: normal;
@@ -14,12 +14,12 @@
   transition: opacity 0.3s;
 }
 
-.popup__submit-button:hover {
+.profile-popup__submit-button:hover {
   opacity: 0.8;
 }
 
 @media screen and (max-width: 768px) {
-  .popup__submit-button {
+  .profile-popup__submit-button {
     font-size: 14px;
     line-height: 17px;
   }

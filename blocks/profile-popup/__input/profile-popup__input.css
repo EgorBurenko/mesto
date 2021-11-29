@@ -1,4 +1,4 @@
-.popup__input {
+.profile-popup__input {
   width: 100%;
   padding: 0;
   margin-bottom: 30px;
@@ -12,12 +12,12 @@
   color: #000;
 }
 
-.popup__input:last-of-type {
+.profile-popup__input:last-of-type {
   margin-bottom: 48px;
 }
 
 @media screen and (max-width: 768px) {
-  .popup__input:last-of-type {
+  .profile-popup__input:last-of-type {
     margin-bottom: 45px;
   }
 }
